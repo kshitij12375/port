@@ -1,0 +1,228 @@
+/* App.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+/* Background for the entire app */
+.App {
+  background: linear-gradient(90deg, #bc07e9, #004581, #ef03f7);
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  animation: gradientAnimation 5s ease infinite;
+  transition: 0.5s ease;
+}
+.App:hover{
+  background: linear-gradient(90deg, #690382, #044a86, #3c013e);
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Navbar styling */
+nav {
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ff6f61; /* Hover color */
+}
+
+/* Section styling */
+section {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  margin: 2rem;
+  border-radius: 10px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Home section */
+#home {
+ /* Add a specific background for the home section */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 6rem 2rem;
+  border-radius: 0;
+}
+
+#home h1 {
+  font-size: 3rem;
+  animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* About section */
+#about {
+  background: rgba(255, 255, 255, 0.1); /* Light overlay */
+}
+
+/* Projects section */
+#projects {
+  background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+}
+
+#projects ul {
+  list-style: none;
+  padding: 0;
+}
+
+#projects ul li {
+  background: rgba(255, 255, 255, 0.1);
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+#projects ul li:hover {
+  transform: scale(1.05);
+}
+
+/* Contact section */
+#contact {
+  background: rgba(255, 255, 255, 0.1); /* Light overlay */
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact form label {
+  margin: 0.5rem 0;
+}
+
+#contact form input,
+#contact form textarea {
+  width: 80%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border: none;
+  border-radius: 5px;
+}
+
+#contact form button {
+  background: #ff6f61;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#contact form button:hover {
+  background: #ff4a3d;
+}
+
+/* Footer styling */
+footer {
+  background: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+}
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+/* App.css */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  animation: slideDown 0.3s ease-in-out;
+}
+
+nav ul li:hover .dropdown {
+  display: block;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav-item {
+      height: 85px;
+      position: relative;
+      right: 163px;
+  }
+}
