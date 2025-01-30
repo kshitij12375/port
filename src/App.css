@@ -19,9 +19,7 @@ body {
   animation: gradientAnimation 5s ease infinite;
   transition: 0.5s ease;
 }
-.App:hover{
-  background: linear-gradient(90deg, #690382, #044a86, #3c013e);
-}
+
 
 @keyframes gradientAnimation {
   0% {
