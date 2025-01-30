@@ -9,7 +9,8 @@ body {
 
 /* Background for the entire app */
 .App {
-  background: linear-gradient(90deg, #bc07e9, #004581, #ef03f7);
+   background-image: url("https://img.freepik.com/free-photo/working-place-dark-room-with-computer-lamp_1142-41945.jpg?semt=ais_hybrid");
+ background-size: contain;
   background-position: center;
   background-attachment: fixed;
   min-height: 100vh;
